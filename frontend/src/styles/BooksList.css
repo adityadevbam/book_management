@@ -1,0 +1,668 @@
+/* Main Container */
+.books-cards-container-b {
+  padding: 2rem 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Section Header */
+.section-header-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-icon-wrapper-b {
+  background: linear-gradient(135deg, rgba(245, 88, 30, 0.1), rgba(245, 88, 30, 0.2));
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section-header-b h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.subheader {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+.book-icon-b {
+  font-size: 1.5rem;
+  color: #F5581E;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.view-all-text-b {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #F5581E;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.view-all-text-b:hover {
+  color: #e04b1a;
+  transform: translateX(3px);
+}
+
+.add-new-book-btn-b {
+  background: linear-gradient(135deg, #F5581E, #E84A1C);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(245, 88, 30, 0.3);
+}
+
+.add-new-book-btn-b:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 88, 30, 0.4);
+}
+
+/* Books Grid Layout */
+.books-grid-b {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Book Card Styles */
+.book-card-b {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.book-card-b:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(245, 88, 30, 0.15);
+  border-color: rgba(245, 88, 30, 0.2);
+}
+
+.book-card-b.featured-b {
+  border-left: 4px solid #F5581E;
+}
+
+/* Badges */
+.badges-container {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.featured-badge-b, .trending-badge-b {
+  background: white;
+  color: #F5581E;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.trending-badge-b {
+  background: linear-gradient(135deg, #F5581E, #E84A1C);
+  color: white;
+}
+
+.badge-icon-b {
+  font-size: 0.8rem;
+}
+
+/* Save Button */
+.save-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  color: #555;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn:hover {
+  background: #F5581E;
+  color: white;
+  transform: scale(1.1);
+}
+
+.save-btn.saved {
+  color: #F5581E;
+}
+
+/* Book Cover */
+.book-cover-b {
+  height: 220px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.book-cover-b img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.book-card-b:hover .book-cover-b img {
+  transform: scale(1.05);
+}
+
+.book-rating-b {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  backdrop-filter: blur(4px);
+}
+
+.star-icon-b {
+  color: #FFC300;
+  font-size: 0.9rem;
+}
+
+/* Book Info */
+.book-info-b {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-info-b h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #1a1a1a;
+  line-height: 1.4;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.book-info-b h3:hover {
+  color: #F5581E;
+}
+
+.book-info-b .author-b {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8em;
+}
+
+.book-meta-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.year-b {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.action-buttons-b {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.quick-view-btn-b {
+  background: rgba(245, 88, 30, 0.1);
+  color: #F5581E;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-view-btn-b:hover {
+  background: rgba(245, 88, 30, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Settings Button */
+.settings-btn-b {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  color: #555;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-btn-b:hover {
+  background: #F5581E;
+  color: white;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Action Popup */
+.action-popup-b {
+  position: absolute;
+  top: 50px;
+  left: 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.action-popup-b button {
+  padding: 0.8rem 1.2rem;
+  background: none;
+  border: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #444;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.action-popup-b button:last-child {
+  border-bottom: none;
+}
+
+.action-popup-b button:hover {
+  background: #f9f9f9;
+  color: #F5581E;
+  padding-left: 1.4rem;
+}
+
+.action-popup-b button.delete-btn-b {
+  color: #ff4444;
+}
+
+.action-popup-b button.delete-btn-b:hover {
+  background: #fff0f0;
+  color: #ff4444;
+}
+
+/* Default Cover */
+.default-cover-b {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.default-cover-icon-b {
+  font-size: 3rem;
+  color: #aaa;
+}
+
+/* Delete Confirmation Modal */
+.delete-confirm-modal-b {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.delete-confirm-content-b {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.delete-confirm-content-b h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.delete-confirm-content-b p {
+  margin-bottom: 1.5rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.delete-confirm-buttons-b {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cancel-btn-b {
+  padding: 0.7rem 1.5rem;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.cancel-btn-b:hover {
+  background-color: #e0e0e0;
+}
+
+.confirm-delete-btn-b {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.confirm-delete-btn-b:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
+}
+
+.delete-icon {
+  font-size: 2rem;
+  color: #ff4444;
+  margin-bottom: 1rem;
+}
+
+/* Empty State */
+.empty-state-container {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.empty-state-content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #F5581E;
+}
+
+.empty-state-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.empty-state-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #F5581E, #E84A1C);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(245, 88, 30, 0.3);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 88, 30, 0.4);
+}
+
+/* Loading State */
+.loading-container-b {
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(245, 88, 30, 0.2);
+  border-radius: 50%;
+  border-top-color: #F5581E;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-container-b p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Error State */
+.error-container-b {
+  padding: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.error-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ff4444;
+}
+
+.error-container-b h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.error-container-b p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+.retry-btn {
+  background: #F5581E;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-btn:hover {
+  background: #E84A1C;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .books-grid-b {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header-b {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .books-grid-b {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .book-cover-b {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .books-cards-container-b {
+    padding: 1.5rem 1rem;
+  }
+  
+  .books-grid-b {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-card-b {
+    max-width: 100%;
+  }
+  
+  .delete-confirm-buttons-b {
+    flex-direction: column;
+  }
+  
+  .cancel-btn-b, .confirm-delete-btn-b {
+    width: 100%;
+  }
+}

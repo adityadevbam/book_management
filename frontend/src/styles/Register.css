@@ -1,0 +1,240 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Register Container */
+.register-container-r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../assets/bg.jpg") no-repeat center center/cover;
+}
+
+/* Register Card */
+.register-card-r {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+}
+
+/* Logo */
+.logo-r {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.highlight-r {
+  color: #fa7c54;
+}
+
+/* Title & Subtitle */
+.register-title-r {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #444;
+}
+
+.register-subtitle-r {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group-r {
+  text-align: left;
+  margin-bottom: 15px;
+  display: flow !important;
+}
+
+.input-group-r label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-group-r input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.input-group-r input:focus {
+  border-color: #fa7c54;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(250, 124, 84, 0.3);
+}
+
+/* Password Field with Toggle */
+.password-wrapper-r {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper-r input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.toggle-password-r {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.toggle-password-r:hover {
+  color: #fa7c54;
+}
+
+/* Register Button */
+.register-button-r {
+  width: 100%;
+  padding: 14px;
+  background: #fa7c54;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-button-r:hover {
+  background: #e06b47;
+}
+
+/* Footer */
+.register-footer-r {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-link-r {
+  color: #fa7c54;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-link-r:hover {
+  text-decoration: underline;
+}
+
+/* Brand Header */
+.brand-header-r {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand-r {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon-r {
+  width: 40px;
+  height: 40px;
+}
+
+.back-button-r {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: 0.3s;
+}
+
+.back-button-r:hover {
+  color: #fa7c54;
+}
+
+
+
+/* Error Message Styling */
+.error-message-r {
+  color: #ff3333;
+  background-color: #ffeeee;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #ffcccc;
+  text-align: center;
+}
+
+/* Success Message Styling */
+.success-message-r {
+  color: #28a745;
+  background-color: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #c8e6c9;
+  text-align: center;
+}
+
+/* Login Link in Error Message */
+.login-link-r {
+  color: #fa7c54;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link-r:hover {
+  text-decoration: underline;
+}
+
+/* Form Input Improvements */
+.input-group-r input {
+  transition: border-color 0.3s ease;
+}
+
+.input-group-r input:focus {
+  border-color: #fa7c54;
+  box-shadow: 0 0 0 2px rgba(250, 124, 84, 0.2);
+}
+
+/* Button Loading State */
+.register-button-r:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Footer Link */
+.footer-link-r {
+  color: #fa7c54;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link-r:hover {
+  color: #e06b47;
+  text-decoration: underline;
+}

@@ -1,0 +1,266 @@
+.book-details-container-v {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+}
+
+.back-button-v {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.back-icon-v {
+  font-size: 1.2rem;
+}
+
+.book-details-card-v {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.book-cover-section-v {
+  flex: 1 1 300px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.book-cover-container-v {
+  position: relative;
+}
+
+.book-cover-v {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.featured-badge-v,
+.trending-badge-v {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #f39c12;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.trending-badge-v {
+  top: 40px;
+  background-color: #e74c3c;
+}
+
+.badge-icon-v {
+  font-size: 0.85rem;
+}
+
+.action-buttons-v {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  align-items: center;
+}
+
+.edit-button-v,
+.delete-button-v {
+  background-color: #f5f5f5;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.edit-button-v:hover {
+  background-color: #dff0ff;
+}
+
+.delete-button-v:hover {
+  background-color: #ffe5e5;
+}
+
+.button-icon-v {
+  font-size: 1rem;
+}
+
+.book-info-section-v {
+  flex: 2;
+  padding: 2rem;
+}
+
+.book-title-v {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-author-v {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.rating-container-v {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.stars-v {
+  display: flex;
+}
+
+.star-v {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.star-v.filled-v {
+  color: #f39c12;
+}
+
+.rating-text-v {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.book-meta-grid-v {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.meta-item-v {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.meta-icon-v {
+  color: #3498db;
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.meta-label-v {
+  font-weight: bold;
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.meta-value-v {
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.book-description-v {
+  margin-top: 1.5rem;
+}
+
+.description-title-v {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.description-text-v {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.delete-modal-v {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content-v {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-buttons-v {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.cancel-button-v,
+.confirm-delete-button-v {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.cancel-button-v {
+  background-color: #eee;
+  color: #555;
+}
+
+.confirm-delete-button-v {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .book-details-card-v {
+    flex-direction: column;
+  }
+
+  .book-cover-section-v {
+    align-items: center;
+    text-align: center;
+  }
+
+  .action-buttons-v {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

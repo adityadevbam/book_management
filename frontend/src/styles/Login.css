@@ -1,0 +1,231 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Login Container */
+.login-container-l {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../assets/bg.jpg") no-repeat center center/cover;
+}
+
+/* Login Card */
+.login-card-l {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+}
+
+/* Logo */
+.logo-l {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.highlight-l {
+  color: #fa7c54;
+}
+
+/* Title & Subtitle */
+.login-title-l {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #444;
+}
+
+.login-subtitle-l {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group-l {
+  text-align: left;
+  margin-bottom: 15px;
+  display: flow !important;
+}
+
+.input-group-l label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-group-l input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px !important;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.input-group-l input:focus {
+  border-color: #fa7c54;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(250, 124, 84, 0.3);
+}
+
+/* Password Field with Toggle */
+.password-wrapper-l {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper-l input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.toggle-password-l {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.toggle-password-l:hover {
+  color: #fa7c54;
+}
+
+/* Login Button */
+.login-button-l {
+  width: 100%;
+  padding: 14px;
+  background: #fa7c54;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-button-l:hover {
+  background: #e06b47;
+}
+
+/* Footer */
+.login-footer-l {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-footer-l a {
+  color: #fa7c54;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-footer-l a:hover {
+  text-decoration: underline;
+}
+
+/* Brand Header */
+.brand-header-l {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand-l {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon-l {
+  width: 40px;
+  height: 40px;
+}
+
+.back-button-l {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: 0.3s;
+}
+
+.back-button-l:hover {
+  color: #fa7c54;
+}
+
+
+
+/* Password Label Container */
+.password-label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  color: #fa7c54;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+  color: #e06b47;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff3333;
+  font-size: 14px;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Sign Up Section */
+.signup-section {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+}
+
+.signup-section p {
+  margin: 0;
+}
+
+.signup-link {
+  color: #fa7c54;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+  color: #e06b47;
+}

@@ -1,0 +1,209 @@
+/* ModernProfile360.css */
+
+.modern-profile-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f1f1f;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modern-cover-photo-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: #f2f2f2;
+}
+
+.modern-cover-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modern-cover-upload-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.modern-hidden-input {
+  display: none;
+}
+
+.modern-profile-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  background: #fff;
+}
+
+.modern-avatar-container {
+  position: absolute;
+  top: -80px;
+  left: 2rem;
+}
+
+.modern-profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.modern-avatar-upload-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ffffffcc;
+  padding: 0.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modern-profile-info {
+  margin-left: 200px;
+}
+
+.modern-profile-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.modern-profile-username {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modern-profile-bio {
+  font-style: italic;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.modern-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.modern-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.modern-contact-icon {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.modern-edit-input,
+.modern-edit-textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.modern-edit-input:focus,
+.modern-edit-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modern-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.modern-edit-btn,
+.modern-save-btn,
+.modern-cancel-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modern-edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.modern-save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.modern-cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modern-edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.modern-save-btn:hover {
+  background-color: #218838;
+}
+
+.modern-cancel-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modern-profile-content {
+    padding: 1.5rem;
+  }
+
+  .modern-avatar-container {
+    position: static;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .modern-profile-info {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .modern-profile-actions {
+    justify-content: center;
+  }
+}

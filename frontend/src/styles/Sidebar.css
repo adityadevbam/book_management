@@ -1,0 +1,217 @@
+/* Modern Sidebar Styles */
+.sidebar {
+  width: 80px;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: fixed;
+  z-index: 100;
+  border-right: 1px solid #f0f0f0;
+}
+
+.sidebar.expanded {
+  width: 240px;
+}
+
+/* Brand Section */
+.brand {
+  display: flex;
+  align-items: center;
+  padding: 24px 16px;
+  gap: 12px;
+  border-bottom: 1px solid #f5f5f5;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sidebar:hover .brand-icon {
+  transform: rotate(-5deg);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.highlight {
+  color: #F5581E;
+}
+
+.sidebar.expanded .logo {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Menu Items */
+.sidebar-menu {
+  flex-grow: 1;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  margin: 0 8px;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.sidebar-item:hover {
+  background: #f8f8f8;
+  color: #F5581E;
+  transform: translateX(2px);
+}
+
+.sidebar-item.active {
+  background: rgba(245, 88, 30, 0.1);
+  color: #F5581E;
+}
+
+.sidebar-item.active::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #F5581E;
+  border-radius: 50%;
+}
+
+.icon {
+  font-size: 1.4rem;
+  min-width: 24px;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-item:hover .icon {
+  transform: scale(1.1);
+}
+
+.sidebar-text {
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.sidebar.expanded .sidebar-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Tooltips for collapsed state */
+.tooltip {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(10px, -50%);
+  background: #2c3e50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #2c3e50 transparent transparent;
+}
+
+.sidebar.collapsed .sidebar-item:hover .tooltip {
+  opacity: 1;
+  transform: translate(15px, -50%);
+}
+
+/* Footer Section */
+.sidebar-footer {
+  padding: 16px 0;
+  border-top: 1px solid #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  margin: 0 8px;
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.logout-button:hover {
+  background: #fff0f0;
+  transform: translateX(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sidebar.expanded {
+    width: 220px;
+  }
+  
+  .sidebar-item {
+    padding: 12px 16px;
+  }
+  
+  .brand {
+    padding: 16px 12px;
+  }
+}

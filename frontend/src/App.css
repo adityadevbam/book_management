@@ -1,0 +1,61 @@
+/* App Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    background: #F3F3F7;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-area {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  /* Button Styles */
+  .open-edit-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #F5581E;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+  }
+  
+  .open-edit-button:hover {
+    background-color: #e04b1a;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .app-container {
+      flex-direction: column;
+    }
+    
+    .content-area {
+      padding: 1rem;
+    }
+  }
